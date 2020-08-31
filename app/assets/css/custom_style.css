@@ -1,0 +1,12 @@
+#drop_file_zone {
+    /* background-color: #EEE; */
+    border: #ffffff 2px dashed;
+    padding: 5px;
+    font-size: 18px;
+}
+#drag_upload_file p {
+    text-align: center;
+}
+#drag_upload_file #selectfile {
+    display: none;
+}
