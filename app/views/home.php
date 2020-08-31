@@ -65,7 +65,7 @@ if (isset($_POST['logout'])) {
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
+            <section class="col-lg-10 connectedSortable">
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">
