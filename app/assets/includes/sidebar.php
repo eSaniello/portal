@@ -40,14 +40,18 @@ $_user = Users::get_user_by_id($_SESSION['user_id']);
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="users.php" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            User Management
-                        </p>
-                    </a>
-                </li>
+                <?php
+                if ($_SESSION['admin'] == 1) {
+                    echo '<li class="nav-item">
+                            <a href="users.php" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    User Management
+                                </p>
+                            </a>
+                        </li>';
+                }
+                ?>
                 <li class="nav-item">
                     <a href="audit_trail.php" class="nav-link">
                         <i class="nav-icon fas fa-history"></i>

@@ -23,6 +23,11 @@ if (isset($_POST['add_user'])) {
     $pw2 = !empty($_POST['password2']) ? trim($_POST['password2']) : null;
     $admin = !empty($_POST['admin']) ? trim($_POST['admin']) : null;
 
+    if ($admin == "false")
+        $admin = false;
+    else if ($admin == "true")
+        $admin = true;
+
     if ($pw != $pw2) {
         header("Location: add_user.php?error=pw");
         return;
@@ -143,8 +148,8 @@ if (isset($_POST['add_user'])) {
                                         <div class="input-group mb-3">
                                             <label>Admin</label>
                                             <select name="admin" class="form-control">
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
+                                                <option value="true">Yes</option>
+                                                <option value="false">No</option>
                                             </select>
                                         </div>
                                         <button name="add_user" type="submit" class="btn btn-primary btn-block">Create</button>
